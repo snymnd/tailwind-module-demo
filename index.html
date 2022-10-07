@@ -3,48 +3,125 @@
   <head>
     <meta charset="utf-8" />
     <title>Profil Naruto</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- <link rel="stylesheet" href="tailwind.css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+      @tailwind variants;
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities; 
+
+
+
+
+      /* disini ada class .bg-blue-600 */
+      
+      /* @layer components {
+        .profil {
+          background-color: red;
+          border: 4px solid black;
+        }
+      }
+
+
+      @layer variants {
+        .input{          
+          @apply mx-auto mb-2 p-2 w-1/2 rounded-xl block placeholder:text-center bg-yellow-800 ;
+        }
+      }
+      @layer base {
+        .input{
+          @apply mx-auto mb-2 p-2 w-1/2 rounded-xl block  placeholder:text-center bg-red-800;
+        }
+      }
+      @layer utilities {
+        .input{
+          @apply mx-auto mb-2 p-2 w-1/2 rounded-xl block  placeholder:text-center bg-blue-800;
+        }
+      }   */
+      
+      @layer components {
+        .input{
+          @apply mx-auto mb-2 p-2 w-1/2 rounded-md block  placeholder:text-center border-4 focus:border-teal-400;
+        }
+        .btn{
+          @apply bg-stone-800 text-white py-2 px-4 rounded-lg mr-auto hover:bg-teal-600 hover:scale-110 transition-all duration-300 
+        }
+        .animate-scale {
+          @apply transform hover:scale-105 transition-all duration-200;
+        }
+      }
+
+      @layer base {
+        a {
+          @apply font-medium hover:text-slate-700 hover:underline;
+        }
+      }
+
+      @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+    </style>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                Marker: ['Permanent Marker'],
+              },
+            },
+          },
+        }
+      </script>
   </head>
 
-  <body >
-    <div>
-      <div>   
-        <h1>Profil</h1>
+  <body class="text-xl bg-slate-600/80" style="background-image: url(bg-cloud.png);">
+    <div class="container w-9/12 mx-auto my-16 bg-gray-300 rounded-xl pt-10 px-40 shadow-2xl  overflow-hidden ">
+      <div class="-mx-40 -mt-10 shadow-2xl shadow-teal-500">
+        <img src="./banner-img.png" alt="naruto-jiraya" class="w-full h-[360px] object-cover object-center ">
+      </div>
+      <div class= "profil text-center text-gray-100 drop-shadow-2xl drop-shadow  text-4xl font-bold uppercase tracking-wider  -mt-12">  <!-- bg-blue-600 -->   
+        <h1 class="">Profil</h1>
       </div>
 
-      <div>
-        <div>  <!-- disini -->  
-          <img src="foto naruto.jfif" alt="Foto Naruto ketika kecil">
+      <div class="header">
+        <div class="w-fit mx-auto my-6 hover:rotate-[360deg] hover:scale-125 hover:my-12 transition-all duration-700 ">  <!-- disini -->  
+          <img src="foto naruto.jfif" alt="Foto Naruto ketika kecil" class="w-44 h-44 object-cover object-bottom border-4 border-teal-500 rounded-full">
         </div>
-        <h1>Naruto Uzumaki</h1>
-        <h4>Calon hokage konoha, sinobi ambis</h4>
-        <p>Remaja yang penuh dengan semangat, pantang menyerah, dan ambisius. Seseorang yang selalu ada ketika temannya
+        <h1 class="text-3xl text-center font-bold uppercase tracking-wider text-center font-Marker">Naruto Uzumaki</h1>
+        <h4 class="text-slate-600 text-center">Hokage ke-7 konoha, sinobi ambis</h4>
+        <p class="mt-10 animate-scale">Remaja yang penuh dengan semangat, pantang menyerah, dan ambisius. Seseorang yang selalu ada ketika temannya
           membutuhkannya. Tidak akan membiarkan siapapun didekatnya bersedih. <a
             href="https://naruto.fandom.com/wiki/Naruto_Uzumaki">
             Kamu bisa mengenalku lebih jauh melalui website ini!</a></p>
       </div>
 
-      <div>
-        <h3>MOTTO</h3>
-        <div>
-          <i>
+      <div class="motto mt-10 animate-scale">
+        <h3 class="text-center font-bold tracking-wide mb-2">MOTTO</h3>
+        <div class="text-center p-7 border-4 border-gray-500 rounded-xl border-dashed shadow-xl ">
+          <i class=" underline border-black font-lg leading-8">
             Shinobi yang melanggar aturan memang disebut sampah, <br> 
             tetapi shinobi yang meninggalkan sahabatnya lebih rendah dari sampah.
           </i>
-          <span>~ Uciha Ubito</span>
+          <span class="block mt-5 font-medium">~ Uciha Ubito</span>
         </div>
       </div>
 
-      <div>
-        <h3>Data Diri</h3>
-        <table>
-          <tbody> <!-- dsiniii -->
+      <div class="data-diri mt-10 mx-auto w-fit shadow-xl animate-scale">
+        <h3 class="text-center font-bold uppercase mb-2">Data Diri</h3>
+        <table class="block border-4 border-gray-500 rounded-xl">
+          <tbody class="[&>tr>th]:border-r-4 [&>tr>th]:border-gray-500 [&>tr>*]:p-4"> <!-- dsiniii -->
             <tr>
               <th >Nama</th>
-              <td>Naruto Uzumaki</td>
+              <td class=" ">Naruto Uzumaki</td>
             </tr>
-            <tr>
+            <tr class="border-y-4 border-gray-500">
               <th >TTL</th>
-              <td>Konoha, 10 Oktober 1989</td>
+              <td class=" ">Konoha, 10 Oktober 1989</td>
             </tr>
             <tr>
               <th >Status</th>
@@ -54,10 +131,10 @@
         </table>
       </div>
 
-      <div>
-        <h3>Preferensi</h3>
-        <div>
-          <h4>😊 Suka</h4>
+      <div class="preferensi mt-10 mx-auto w-fit">
+        <h3 class="text-center font-bold uppercase mb-2">Preferensi</h3>
+        <div class="border-4 border-gray-500 p-4 rounded-lg mb-6 shadow-xl animate-scale ">
+          <h4 class="border-b-2 border-black px-4 text-gray-200  font-semibold text-center mb-4 bg-green-500 ">😊 Suka</h4>
           <ul>
             <li>Memancing</li>
             <li>Berpetualang</li>
@@ -66,8 +143,8 @@
             <li>Mendaki</li>
           </ul>
         </div>
-        <div>
-          <h4>😖 Gak suka</h4>
+        <div class="border-4 border-gray-500 p-4 rounded-lg shadow-xl animate-scale">
+          <h4 class="border-b-2 border-black px-4 text-gray-200 font-semibold text-center mb-4  bg-red-500 ">😖 Gak suka</h4>
           <ul>
             <li>Belajar</li>
             <li>Buah nangka</li>
@@ -76,23 +153,23 @@
         </div>
       </div>
 
-      <div>
-        <h1>Terima Kasih!</h1>
-        <h3>Salam Kenal Dattebayo...</h3>
-        <p>Jika mau kenal lebih jauh, jangan ragu kontak aku disini yaa</p>
-        <form action="#" method="post">
-          <input type="email" placeholder="narutouzumaki@yahoo.com">
-          <textarea placeholder="mau ngobrol ga?"></textarea>
-          <button type="reset">Kirim</button>
+      <div class="bg-slate-500 text-white -mx-40 mt-10 py-8 px-40 text-center border-y-4 border-slate-800 ">
+        <h1 class=" text-5xl font-bold">Terima Kasih!</h1>
+        <h3 class=" text-3xl font-medium my-3">Salam Kenal Dattebayo...</h3>
+        <p class="mt-5 mb-2 font-light">Jika mau kenal lebih jauh, jangan ragu kontak aku disini yaa</p>
+        <form action="#" method="post" class="my-2">
+          <input class="mb-4 input" type="email" placeholder="narutouzumaki@yahoo.com">
+          <textarea class="input " placeholder="mau ngobrol ga?"></textarea>
+          <button class="btn my-2" type="reset">Kirim</button>
         </form>
-        <button type="reset"><a href="#">⬆️</a></button>
+        <button class="btn animate-bounce mt-3" type="reset"><a href="#">⬆️</a></button>
       </div>
 
       
-      <div>
-        <p>connect with me ➡️</p>
-        <a>ig: @labse_its</a>
-        <a>| github: Lab RPL ITS</a>
+      <div class="sosial-media text-center -mx-40 py-5 px-20 bg-teal-500 text-white">
+        <p class="inline opacity-60">connect with me ➡️</p>
+        <a href="https://www.instagram.com/labse_its/">ig: @labse_its</a>
+        <a href="https://github.com/Lab-RPL-ITS">| github: Lab RPL ITS</a>
       </div>
     </div>
   </body>
